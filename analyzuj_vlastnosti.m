@@ -19,5 +19,9 @@ function analyzuj_vlastnosti(cit,men)
         disp('System nie je nestabilny')
     end
         
-        
+    if (imag(c)) ~= 0
+        disp('System je periodicky!')
+    else
+        disp('System je aperiodicky!')
+    end
 end
