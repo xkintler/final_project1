@@ -11,10 +11,12 @@ function analyzuj_vlastnosti(cit,men)
         disp('System nie je fyzikalne realizovatelny')
     end
     
-    if sum(c > 0) == 0
+    if isempty(find(c < 0,1)) == 0
         disp('System je stabilny')
+    elseif find(c==0,1)>0
+        disp('system je na hranici stability')
     else
-        disp('System je nestabilny')
+        disp('System nie je nestabilny')
     end
         
         
